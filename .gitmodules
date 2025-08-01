@@ -4,3 +4,6 @@
 [submodule "redis"]
 	path = redis
 	url = https://github.com/redis/redis.git
+[submodule "garnet"]
+	path = garnet
+	url = https://github.com/microsoft/garnet.git
