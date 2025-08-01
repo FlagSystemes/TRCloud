@@ -21,4 +21,13 @@ cd "$ROOT_DIR/redis"
 make -j4 PREFIX="$DIST_DIR/redis" install
 make test
 
+# Build Redis
+echo "Building Garnet..."
+cd "$ROOT_DIR/garnet"
+dotnet restore
+dotnet build -c Release -o "$DIST_DIR/garnet"
+
+
+
+
 echo "Build complete. Artifacts are in $DIST_DIR."
