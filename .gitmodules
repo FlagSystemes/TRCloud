@@ -16,3 +16,6 @@
 [submodule "traefik"]
 	path = traefik
 	url = https://github.com/traefik/traefik.git
+[submodule "influxdb"]
+	path = influxdb
+	url = https://github.com/influxdata/influxdb.git
