@@ -13,3 +13,6 @@
 [submodule "seaweedfs"]
 	path = seaweedfs
 	url = https://github.com/seaweedfs/seaweedfs.git
+[submodule "traefik"]
+	path = traefik
+	url = https://github.com/traefik/traefik.git
