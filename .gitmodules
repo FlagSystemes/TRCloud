@@ -10,3 +10,6 @@
 [submodule "nats-server"]
 	path = nats-server
 	url = https://github.com/nats-io/nats-server.git
+[submodule "seaweedfs"]
+	path = seaweedfs
+	url = https://github.com/seaweedfs/seaweedfs.git
