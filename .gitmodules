@@ -7,3 +7,6 @@
 [submodule "garnet"]
 	path = garnet
 	url = https://github.com/microsoft/garnet.git
+[submodule "nats-server"]
+	path = nats-server
+	url = https://github.com/nats-io/nats-server.git
