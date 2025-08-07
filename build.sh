@@ -45,7 +45,7 @@ go build -o "$DIST_DIR/seaweedfs/seaweedfs"
 # Build traefik
 echo "Building traefik..."
 cd "$ROOT_DIR/traefik"
-make -j4 PREFIX="$DIST_DIR/traefik"
+make binary -j4 PREFIX="$DIST_DIR/traefik"
 
 # Build influxdb
 echo "Building traefik..."
