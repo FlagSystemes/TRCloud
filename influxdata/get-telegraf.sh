@@ -20,7 +20,7 @@ echo "Downloading telegraf binaries for windows amd64..."
 
 curl -sSL 'https://dl.influxdata.com/telegraf/releases/telegraf-1.35.3_windows_amd64.zip'  -o '../dist/influxdata/telegraf/telegraf-1.35.3_windows_amd64.zip'
 
-unzip  -o '../dist/influxdata/telegraf/telegraf-1.35.3_windows_amd64.zip' -d '../dist/influxdata/telegraf/win-x64' 
+unzip  -j -o '../dist/influxdata/telegraf/telegraf-1.35.3_windows_amd64.zip' -d '../dist/influxdata/telegraf/win-x64' 
 
 rm '../dist/influxdata/telegraf/telegraf-1.35.3_windows_amd64.zip'
 
