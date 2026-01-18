@@ -1,3 +1,6 @@
 [submodule "rethinkdb"]
 	path = rethinkdb
 	url = https://github.com/rethinkdb/rethinkdb.git
+[submodule "redis"]
+	path = redis
+	url = https://github.com/redis/redis.git
