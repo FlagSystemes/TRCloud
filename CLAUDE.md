@@ -52,7 +52,55 @@ git submodule update --init --recursive
 
 ### Full Build
 
-Build all components at once:
+#### Using Makefile (Recommended)
+
+The project includes a modern Makefile with comprehensive build targets:
+
+```bash
+# Show all available targets
+make help
+
+# Complete development setup
+make dev-setup
+
+# Build all components
+make build
+
+# Build specific components
+make build-rethinkdb
+make build-redis
+make build-garnet
+make build-nats
+make build-seaweedfs
+make build-traefik
+
+# Check build status
+make status
+
+# Run tests
+make test
+
+# Create distribution archive
+make dist
+
+# Clean build artifacts
+make clean
+make clean-all  # Including distribution archives
+```
+
+**Quick Commands:**
+- `make help` - Display all available targets with descriptions
+- `make version` - Show version information
+- `make dep-check` - Verify all build dependencies are installed
+- `make dev-setup` - Initialize submodules and check dependencies
+- `make build` - Build all components with parallel jobs
+- `make status` - Show which components are built
+- `make quick` - Quick build (Go components only)
+- `make ci` - CI/CD build (no interactive prompts)
+
+#### Using build.sh
+
+Alternatively, build all components at once using the shell script:
 ```bash
 ./build.sh
 ```
@@ -195,6 +243,7 @@ TRCloud/
 │       ├── influxdb/          # InfluxDB binaries per platform
 │       └── telegraf/          # Telegraf binaries per platform
 ├── build.sh                   # Main build script
+├── Makefile                   # Modern build system with comprehensive targets
 ├── CLAUDE.md                  # This file - AI assistant guidance
 ├── WARP.md                    # Warp terminal guidance
 └── README.md                  # Project readme
