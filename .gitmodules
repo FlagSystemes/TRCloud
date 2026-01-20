@@ -4,3 +4,18 @@
 [submodule "redis"]
 	path = redis
 	url = https://github.com/redis/redis.git
+[submodule "nats"]
+	path = nats
+	url = https://github.com/nats-io/nats-server.git
+[submodule "natscli"]
+	path = natscli
+	url = https://github.com/nats-io/natscli.git
+[submodule "seaweedfs"]
+	path = seaweedfs
+	url = https://github.com/seaweedfs/seaweedfs.git
+[submodule "traefik"]
+	path = traefik
+	url = https://github.com/traefik/traefik.git
+[submodule "garnet"]
+	path = garnet
+	url = https://github.com/microsoft/garnet.git
