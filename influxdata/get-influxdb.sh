@@ -36,4 +36,6 @@ unzip  -o '../dist/influxdata/influxdb/influxdb3-core.zip' -d '../dist/influxdat
 
 rm '../dist/influxdata/influxdb/influxdb3-core.zip'
 
+
+
 echo "InfluxDB 3.3.0 core binaries downloaded and extracted successfully."

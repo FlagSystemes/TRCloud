@@ -7,6 +7,7 @@ mkdir -p '../dist/influxdata/telegraf/osx-amd64/'
 mkdir -p '../dist/influxdata/telegraf/linux-amd64/'
 mkdir -p '../dist/influxdata/telegraf/linux-arm64/'
 mkdir -p '../dist/influxdata/telegraf/win-x64/'
+mkdir -p '../dist/influxdata/telegraf/win-arm64/'
 
 echo "Downloading telegraf  binaries for osx arm64..."
 
@@ -24,6 +25,13 @@ unzip  -j -o '../dist/influxdata/telegraf/telegraf-1.35.3_windows_amd64.zip' -d 
 
 rm '../dist/influxdata/telegraf/telegraf-1.35.3_windows_amd64.zip'
 
+echo "Downloading telegraf binaries for windows arm64..."
+
+curl -sSL 'https://dl.influxdata.com/telegraf/releases/telegraf-1.35.3_windows_arm64.zip'  -o '../dist/influxdata/telegraf/telegraf-1.35.3_windows_arm64.zip'
+
+unzip  -j -o '../dist/influxdata/telegraf/telegraf-1.35.3_windows_arm64.zip' -d '../dist/influxdata/telegraf/win-arm64' 
+
+rm '../dist/influxdata/telegraf/telegraf-1.35.3_windows_arm64.zip'
 
 
 
