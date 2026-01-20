@@ -32,7 +32,7 @@ rm '../dist/influxdata/influxdb/influxdb3-core.tar.gz'
 echo "Downloading InfluxDB 3.3.0 core binaries for Windows..."
 curl -sSL 'https://dl.influxdata.com/influxdb/releases/influxdb3-core-3.3.0-windows_amd64.zip' -o '../dist/influxdata/influxdb/influxdb3-core.zip'
 
-unzip  -o '../dist/influxdata/influxdb/influxdb3-core.zip' -d '../dist/influxdata/influxdb/win-x64'
+unzip  -q -o '../dist/influxdata/influxdb/influxdb3-core.zip' -d '../dist/influxdata/influxdb/win-x64'
 
 rm '../dist/influxdata/influxdb/influxdb3-core.zip'
 
