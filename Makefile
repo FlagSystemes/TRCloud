@@ -79,7 +79,7 @@ garnet: $(DIST_DIR)
 		dotnet publish main/GarnetServer/GarnetServer.csproj \
 			-c Release \
 			-o "$(DIST_DIR)/garnet" \
-			--framework "net9.0" \
+			--framework "net10.0" \
 			-p:PublishSingleFile=true
 
 #------------------------------------------------------------------------------
