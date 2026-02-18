@@ -113,7 +113,7 @@ seaweedfs: $(DIST_DIR)
 
 traefik: $(DIST_DIR)
 	@echo "Building Traefik..."
-	cd traefik && $(MAKE) binary -j$(JOBS)
+	cd traefik && $(MAKE) generate && $(MAKE) binary -j$(JOBS)
 	mkdir -p $(DIST_DIR)/traefik
 	cp traefik/dist/traefik $(DIST_DIR)/traefik/
 
