@@ -3,7 +3,7 @@
 
 .PHONY: all clean help submodules \
         influxdb telegraf influxdata \
-        rethinkdb redis garnet nats natscli seaweedfs traefik
+        rethinkdb redis nats natscli seaweedfs traefik
 
 # Directories
 ROOT_DIR := $(shell pwd)
@@ -13,7 +13,7 @@ DIST_DIR := $(ROOT_DIR)/dist
 JOBS ?= $(shell nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 4)
 
 # Default target
-all: influxdata rethinkdb redis garnet nats natscli seaweedfs traefik
+all: influxdata rethinkdb redis nats natscli seaweedfs traefik
 	@echo "Build complete. Artifacts are in $(DIST_DIR)"
 
 # Initialize git submodules
@@ -68,19 +68,6 @@ redis-test:
 	@echo "Testing Redis..."
 	cd redis && $(MAKE) test
 
-#------------------------------------------------------------------------------
-# Garnet (.NET 9)
-#------------------------------------------------------------------------------
-
-garnet: $(DIST_DIR)
-	@echo "Building Garnet..."
-	cd garnet && \
-		dotnet restore && \
-		dotnet publish main/GarnetServer/GarnetServer.csproj \
-			-c Release \
-			-o "$(DIST_DIR)/garnet" \
-			--framework "net10.0" \
-			-p:PublishSingleFile=true
 
 #------------------------------------------------------------------------------
 # NATS (Go)
@@ -130,8 +117,6 @@ clean-rethinkdb:
 clean-redis:
 	cd redis && $(MAKE) distclean || true
 
-clean-garnet:
-	cd garnet && dotnet clean || true
 
 clean-go:
 	cd nats && go clean || true
@@ -139,7 +124,7 @@ clean-go:
 	cd seaweedfs/weed && go clean || true
 	cd traefik && $(MAKE) clean || true
 
-clean-all: clean clean-rethinkdb clean-redis clean-garnet clean-go
+clean-all: clean clean-rethinkdb clean-redis clean-go
 
 #------------------------------------------------------------------------------
 # Test targets
@@ -187,7 +172,6 @@ help:
 	@echo "  rethinkdb       Build RethinkDB"
 	@echo "  rethinkdb-debug Build RethinkDB with debug symbols"
 	@echo "  redis           Build Redis"
-	@echo "  garnet          Build Garnet"
 	@echo "  nats            Build NATS Server"
 	@echo "  natscli         Build NATS CLI"
 	@echo "  nats-all        Build NATS Server and CLI"
