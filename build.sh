@@ -7,12 +7,12 @@ DIST_DIR="$ROOT_DIR/dist"
 
 # Ensure dist directory exists
 mkdir -p "$DIST_DIR"
-# get influxdb
-echo "getting influxdb..."
-cd "$ROOT_DIR/influxdata"
+# # get influxdb
+# echo "getting influxdb..."
+# cd "$ROOT_DIR/influxdata"
 
-sh get-influxdb.sh
-sh get-telegraf.sh
+# sh get-influxdb.sh
+# sh get-telegraf.sh
 
 
 # Build RethinkDB

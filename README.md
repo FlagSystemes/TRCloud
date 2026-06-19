@@ -1,2 +1,2 @@
 # TRCloud
-TEch Runner Cloud
+Tech Runner Cloud
